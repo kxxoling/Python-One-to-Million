@@ -16,7 +16,7 @@
    * [部署代码](website/hosting.md)
    * [HTML 模板](website/templating.md)
 * [HTML 与 XML](html/README.md)
-   * [HTML 转译](html/html.md)
+   * [HTML](html/html.md)
    * [lxml 与 requests](html/lxml-and-requests.md)
 * [控制台程序](console)
 * [数据库](db)
