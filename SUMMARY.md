@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [skill-tree](skill-tree/README.md)
 * [如何写出优美的代码](great-code/)
    * [好的结构是关键](great-code/great-code.md)
 * [网络应用](web-app/web-app.md)
@@ -38,4 +37,6 @@
    * [Tools](speed/tools.md)
    * [Libraries](speed/lib.md)
    * [Resources](speed/res.md)
+* [设计模式](design-patterns/README.md)
+   * [单例模式](design-patterns/singleton.md)
 
