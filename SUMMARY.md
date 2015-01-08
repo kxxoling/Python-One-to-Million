@@ -39,4 +39,8 @@
    * [Resources](speed/res.md)
 * [设计模式](design-patterns/README.md)
    * [单例模式](design-patterns/singleton.md)
+* [文件处理](file/README.md)
+   * [python-magic](file/python-magic.md)
+* [Python Magic Methods](magic/README.md)
+* [Jenkins](jenkins.md)
 
