@@ -5,7 +5,9 @@
 
 ### 图片转 ASC II 码
 
-原理：http://stackoverflow.com/questions/394882/how-do-ascii-art-image-conversion-algorithms-work
+原理：
+
+http://www.jave.de/image2ascii/algorithms.html
 
 示例代码：https://github.com/kxxoling/image2ascii
 
