@@ -4,8 +4,8 @@
         "disqus": {
             "shortName": "python-1-2-m"
         },
-        share:{
-            google: {}
+        "share":{
+            "google": {}
         },
         "sharing": {
             "google": null,
