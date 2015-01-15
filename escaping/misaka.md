@@ -1,4 +1,4 @@
-#Misaka 与其它 Python Markdown 库建议对比
+#Misaka 与其它 Python Markdown 库简易对比
 
 @Lepture 在自己的英文博客中对常见的 Python Markdown 库做了一些测试和对比这里简单地做一下总结。
 他介绍到的，知名的 Python Markdown 库就有：
