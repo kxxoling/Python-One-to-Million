@@ -30,6 +30,7 @@
 * [图片处理](image)
    * [PIL](image/pil.md)
    * [几种图片转字符算法介绍](image/image2ascii.md)
+   * [QRCode](image/qrcode.md)
 * [开发环境](dev-env)
    * [编辑器](dev-env/editor.md)
    * [IDE](dev-env/ide.md)
