@@ -1,5 +1,5 @@
 {
-    "plugins": ["quizzes", "disqus", "share", "anchors"],
+    "plugins": ["quizzes", "disqus", "share", "anchors", "plantuml"],
     "pluginsConfig": {
         "disqus": {
             "shortName": "python-1-2-m"
