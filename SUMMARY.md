@@ -35,6 +35,7 @@
    * [PIL](image/pil.md)
    * [QRCode](image/qrcode.md)
    * [几种图片转字符算法介绍](image/image2ascii.md)
+   * [验证码破解](image/captcha.md)
 * [开发环境](dev-env/README.md)
    * [编辑器](dev-env/editor.md)
    * [IDE](dev-env/ide.md)
