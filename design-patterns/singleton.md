@@ -100,3 +100,6 @@ two = MyClass()
 都直接返回这个实例对象。
 
 这个解决方案强化了类与其单例之间的内聚性。
+
+
+参考链接：[Creating a singleton in python](http://stackoverflow.com/questions/6760685/creating-a-singleton-in-python)
