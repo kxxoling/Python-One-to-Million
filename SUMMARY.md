@@ -22,6 +22,7 @@
    * [DB API](db/db-api.md)
    * [SQLAlchemy](db/sqlalchemy.md)
    * [DjangoORM](db/djangoorm.md)
+   * [Pony ORM](db/pony.md)
    * [peewee](db/peewee.md)
 * [NoSQL 数据库](nosql/README.md)
    * [Redis](nosql/redis.md)
