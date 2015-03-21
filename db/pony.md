@@ -53,4 +53,12 @@ Pony 还提供了一个在线的数据库结构编辑器：[Pony Editor](https:/
 ## 事务
 
 
+
+## 实现
+
+关于 Pony ORM 的实现，其作者在
+[StackOverflow](http://stackoverflow.com/questions/16115713/how-pony-orm-does-its-tricks)
+上有做过解释，这里附上中文：
+[WindRunner](http://blog.windrunner.info/2015/03/pony.html)
+
 参考链接：[官方文档](http://doc.ponyorm.com/firststeps.html)
