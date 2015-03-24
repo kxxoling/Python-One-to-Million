@@ -8,5 +8,8 @@ Icon?
 Thumbs.db
 ehthumbs.db
 
+plantuml.jar
+assets/images/uml
+
 _book/*
 node_modules/
