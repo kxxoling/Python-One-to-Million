@@ -54,6 +54,7 @@
 * [文件处理](file/README.md)
    * [python-magic](file/python-magic.md)
 * [Python Magic Methods](magic/README.md)
+   * [Python 中的魔法方法](magic/magic.md)
 * [Jenkins](jenkins.md)
 * [Escaping](escaping/README.md)
    * [Misaka](escaping/misaka.md)
