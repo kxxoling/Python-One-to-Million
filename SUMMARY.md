@@ -3,6 +3,8 @@
 * [Introduction](README.md)
 * [如何写出优美的代码](great-code/README.md)
    * [好的结构是关键](great-code/great-code.md)
+* [REPL 环境](repl/README.md)
+   * [BPython](repl/bpython.md)
 * [网络应用](web-app/README.md)
    * [HTTP](web-app/http.md)
    * [分布式系统](web-app/distribute.md)
