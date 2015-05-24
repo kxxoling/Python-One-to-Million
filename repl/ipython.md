@@ -36,6 +36,8 @@ IPython 会捕获 Magic 关键字，自己处理这些命令，未能捕获的�
 %who_ls, %whos, %xmode
 ```
 
+更全面的 magic 命令列表和功能介绍见[这里](https://damontallen.github.io/IPython-quick-ref-sheets/)。
+
 
 ### Tab 补全
 
