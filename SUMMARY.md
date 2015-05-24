@@ -5,6 +5,7 @@
    * [好的结构是关键](great-code/great-code.md)
 * [REPL 环境](repl/README.md)
    * [BPython](repl/bpython.md)
+   * [IPython](repl/ipython.md)
 * [网络应用](web-app/README.md)
    * [HTTP](web-app/http.md)
    * [分布式系统](web-app/distribute.md)
