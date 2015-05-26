@@ -3,6 +3,7 @@
 * [Introduction](README.md)
 * [如何写出优美的代码](great-code/README.md)
    * [好的结构是关键](great-code/great-code.md)
+   * [Python 如何测试](great-code/testing.md)
 * [REPL 环境](repl/README.md)
    * [BPython](repl/bpython.md)
    * [IPython](repl/ipython.md)
