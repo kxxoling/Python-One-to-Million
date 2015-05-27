@@ -268,3 +268,13 @@ pass
 在这里它并不是个问题，因为在它自身中缩进都保持一致。在其它一些情况下，可能会成为真正的问题。
 可以使用magic关键字autoindent来开关自动缩进，告诉IPython不要添加多余的缩进──就象在vim中设置粘贴set paste一样。
 
+
+## IPython notebook
+
+### 启动
+
+在终端输入： ``ipython notebook``
+
+IPython notebook 的使用和 Vim 有些类似，分“命令模式”和“编辑模式”，切换方法同样为 ``ESC`` 键。
+在命令模式下按 ``h`` 可以呼出帮助菜单，貌似不区分大小写。
+
