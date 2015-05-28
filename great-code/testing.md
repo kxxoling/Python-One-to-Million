@@ -151,6 +151,22 @@ Python 自带了 [unittest](https://docs.python.org/2/library/unittest.html) 库
   和第三方的 [Flask-Testing](https://pythonhosted.org/Flask-Testing/)
 
 
+### Django
+
+Django 的启动互相之间的依赖严重，大部分文件都不能单独执行，测试时建议使用封装后的工具，
+如： `django.test`、`django_nose` 等等。
+
+
+### Flask
+
+Flask 在写测试的时候需要主要 ``app_context`` 和 ``request_context`` 中的[陷阱](http://flask.pocoo.org/docs/0.10/appcontext/)。
+
+
+### Tornado
+
+Tornado 的 testing 库很简陋，主要是针对自身异步特性封装了一些工具。
+
+
 ### 浏览器
 
 浏览器端的测试自动化最常用的还是 [Selenium](http://www.seleniumhq.org/)，Python 版本的
