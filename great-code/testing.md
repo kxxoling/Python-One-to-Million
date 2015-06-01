@@ -132,6 +132,18 @@ Python 自带了 [unittest](https://docs.python.org/2/library/unittest.html) 库
 在 Python 2.7 版本以后，unittest.TestCase 类自带了 ``assertListEquel()`` 等方法，
 非常便利，也是我不愿意兼容 Python 2.6 的重要原因。
 
+附即将弃用的方法对照表：
+
+| 方法名                    | 即将弃用的方法名              |
+|---------------------------|-------------------------------|
+| assertEqual()             | failUnlessEqual, assertEquals |
+| assertNotEqual()          | failIfEqual                   |
+| assertTrue()              | failUnless, assert_           |
+| assertFalse()             | failIf                        |
+| assertRaises()            | failUnlessRaises              |
+| assertAlmostEqual()       | failUnlessAlmostEqual         |
+| assertNotAlmostEqual()    | failIfAlmostEqual             |
+
 [unittest2](http://www.voidspace.org.uk/python/articles/unittest2.shtml)
 是 unittest 的增强版本，几乎完全兼容 unittest 的接口，升级时只需要将 ``import unittest``
 替换为 ``import unittest2`` 即可，提供的新方法更强大也更严谨。
