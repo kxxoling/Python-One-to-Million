@@ -151,6 +151,8 @@ Python 自带了 [unittest](https://docs.python.org/2/library/unittest.html) 库
 
 ### py.test
 
+[pytest](http://pytest.org/latest/) 是一个成熟的全功能测试框架。
+
 
 ## web 相关
 
