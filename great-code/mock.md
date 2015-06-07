@@ -219,4 +219,5 @@ patch.TEST_PREFIX = 'test'
 * [置换测试: Mock, Stub 和其他](http://objccn.io/issue-15-5/)
 * [PyPI - mock](https://pypi.python.org/pypi/mock)
 * [mock - getting started](http://www.voidspace.org.uk/python/mock/getting-started.html)
+* [Terminology for Mocks/Doubles/Fake/Dummy/Stub](http://martinfowler.com/articles/mocksArentStubs.html)
 
