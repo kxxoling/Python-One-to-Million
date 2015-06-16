@@ -20,6 +20,7 @@
    * [服务器最佳实践](website/best-practice.md)
    * [部署代码](website/hosting.md)
    * [HTML 模板](website/templating.md)
+* [网站的部署](deployment/README.md)
 * [HTML 与 XML](html/README.md)
    * [HTML](html/html.md)
    * [lxml 与 requests](html/lxml-and-requests.md)
