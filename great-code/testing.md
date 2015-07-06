@@ -247,6 +247,15 @@ commands=make test     	# 执行测试的命令
 mock 已经加入标准库，调用方法是 ``from unittest import mock``。
 
 
+## Code Coverage
+
+对于任何充分覆盖测试的代码，其 Code Coverage 程度肯定是 100%，任何覆盖率没能达到 100%
+的代码都有隐藏 bug 的可能。在 Python 社区，代码覆盖计算工具的标准是 ``coverage.py`` ，
+当然，在计算覆盖率时要记得配合 tox ，以保证你针对不同环境的代码都被运行过。
+
+coverage.py 也有 nose 插件，可以配合使用。
+
+
 ## CI
 
 * [travis CI](https://travis-ci.org/)   对于开源项目免费
@@ -280,4 +289,3 @@ mock 已经加入标准库，调用方法是 ``from unittest import mock``。
 * [Introduction to Python/Django tests](http://django-testing-docs.readthedocs.org/)
 * [DjangoCon 2013 - How to Write Fast and Efficient Unit Tests in Django](http://www.slideshare.net/cordiskinsey/djangocon-2013-how-to-write-fast-and-efficient-unit-tests-in-django)
 * [Testing and Django](http://carljm.github.io/django-testing-slides)
-
