@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [如何写出优美的代码](great-code/README.md)
-   * [好的结构是关键](great-code/great-code.md)
    * [如何测试 Python 应用](great-code/testing.md)
    * [如何测试 Django 应用](great-code/django-testing.md)
    * [面向接口测试——Python mock 库](great-code/mock.md)
