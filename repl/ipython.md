@@ -21,20 +21,13 @@ IPython notebook，相当于一个网页版的 REPL 环境。
 
 ## 特性
 
-### Magic 关键字
+### 魔法指令（Magic Command）
 
-IPython 会捕获 Magic 关键字，自己处理这些命令，未能捕获的作为 Python 命令执行。
-常用关键字：
+魔法指令是 IPython 定义的命令，以提供 IPython 环境下与环境交互的能力，通常对应于 shell 命令。
+你可以在 IPython 控制台中输入 ``ls`` 或者 ``%ls`` 来查看当前目录文件。
 
-```
-%Exit, %Pprint, %Quit, %alias, %autocall, %autoindent, %automagic,
-%bookmark, %cd, %color_info, %colors, %config, %dhist, %dirs, %ed,
-%edit, %env, %hist, %logoff, %logon, %logstart, %logstate, %lsmagic,
-%macro, %magic, %p, %page, %pdb, %pdef, %pdoc, %pfile, %pinfo, %popd,
-%profile, %prun, %psource, %pushd, %pwd, %r, %rehash, %rehashx, %reset,
-%run, %runlog, %save, %sc, %sx, %system_verbose, %unalias, %who,
-%who_ls, %whos, %xmode
-```
+魔法指令通常以 ``%`` 开始，对于非 ``%`` 开始的魔法指令，IPython 会首先判断它是不是 Python
+对象，如是 Python 对象则优先作为 Python 对象处理。
 
 更全面的 magic 命令列表和功能介绍见[这里](https://damontallen.github.io/IPython-quick-ref-sheets/)。
 
@@ -51,17 +44,19 @@ IPython 会捕获 Magic 关键字，自己处理这些命令，未能捕获的�
 IPython 的支持更强大一些。不过 IPython 的自动补全依旧是循环式的，需要菜单式的可以试试 ptpython。
 
 
+### Plot
+
+常见用法是配合 mathplotlib，可以调用 mathplotlib GUI 程序展现数据图。
+
+
 ### 自省
 
 IPython 提供了 ``?`` 和 ``??`` 命令，? 操作符会截断长的字符串。相反，?? 不会截断长字符串，
 如果有源代码的话还会以语法高亮形式显示它们。
 
+除了简化 Python 的自省，它也提供自身的自省。比如，当你在 IPython shell 输入了大量命令后：
 
-### 历史
-
-当你在IPython shell下交互的输入了大量命令，语句等等，就象这样:
-
-```python
+```ipython
 In [1]: a = 1
 
 In [2]: b = 2
@@ -80,7 +75,7 @@ In [6]: for i in range(20):
 
 你可以快速查看那些输入的历史记录:
 
-```python
+```ipython
 In [7]: hist
 1: a = 1
 2: b = 2
@@ -94,7 +89,7 @@ In [7]: hist
 
 要去掉历史记录中的序号（这里是1至6），使用命令hist -n:
 
-```python
+```ipython
 In [8]: hist -n
 a = 1
 b = 2
@@ -267,6 +262,11 @@ pass
 
 在这里它并不是个问题，因为在它自身中缩进都保持一致。在其它一些情况下，可能会成为真正的问题。
 可以使用magic关键字autoindent来开关自动缩进，告诉IPython不要添加多余的缩进──就象在vim中设置粘贴set paste一样。
+
+
+## 作为库使用
+
+NotFinished
 
 
 ## IPython notebook
