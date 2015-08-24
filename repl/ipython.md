@@ -26,10 +26,13 @@ IPython notebook，相当于一个网页版的 REPL 环境。
 魔法指令是 IPython 定义的命令，以提供 IPython 环境下与环境交互的能力，通常对应于 shell 命令。
 你可以在 IPython 控制台中输入 ``ls`` 或者 ``%ls`` 来查看当前目录文件。
 
-魔法指令通常以 ``%`` 开始，对于非 ``%`` 开始的魔法指令，IPython 会首先判断它是不是 Python
-对象，如是 Python 对象则优先作为 Python 对象处理。
+魔法指令通常以 ``%`` 开始，对于非 ``%`` 开始的魔法指令，IPython 会首先判断它是不是
+Python 对象，如是对象则优先作为 Python 对象处理。
 
 更全面的 magic 命令列表和功能介绍见[这里](https://damontallen.github.io/IPython-quick-ref-sheets/)。
+
+魔法指令中还包括了很多 Shell 命令，但并不是全部，IPython 也支持直接执行 Shell
+命令，只需要以感叹号 ``!`` 起始，例如：``!ls``。
 
 
 ### Tab 补全
@@ -37,8 +40,8 @@ IPython notebook，相当于一个网页版的 REPL 环境。
 原生的 Python shell 可以通过 ``rlcompleter`` 和 ``readline`` 库获得 Tab 补全能力：
 
 ```python
->>> import rlcompleter, readline
->>> readline.parse_and_bind('tab: complete')
+import rlcompleter, readline
+readline.parse_and_bind('tab: complete')
 ```
 
 IPython 的支持更强大一些。不过 IPython 的自动补全依旧是循环式的，需要菜单式的可以试试 ptpython。
@@ -154,14 +157,18 @@ IPython 的另一特性是它与 Python debugger 的接口。在 IPython shell �
 运行magic关键字run带一个源文件名就可以在IPython解释器中运行一个文件了
 （例如run <源文件> <运行源文件所需参数>）。参数主要有以下这些：
 
--n 阻止运行源文件代码时__name__变量被设为”__main__”。这会防止
-
-if __name__ == "__main__":
+* -n 阻止运行源文件代码时__name__变量被设为”__main__”。这会防止
+``if __name__ == "__main__":``
 块中的代码被执行
--i 源文件就在当前IPython的名字空间下运行而不是在一个新的名字空间中。如果你需要源代码可以使用在交互式session中定义的变量就会很有用。
--p 使用Python的profiler模块运行并分析源代码。使用该选项代码不会运行在当前名字空间。
-宏
-宏允许用户为一段代码定义一个名字，这样你可以在以后使用这个名字来运行这段代码。就象在magic关键字edit中提到的，列表切片法也适用于宏定义。假设有一个历史记录如下:
+* -i 源文件就在当前IPython的名字空间下运行而不是在一个新的名字空间中。
+如果你需要源代码可以使用在交互式session中定义的变量就会很有用。
+* -p 使用Python的profiler模块运行并分析源代码。使用该选项代码不会运行在当前名字空间。
+
+
+### 宏
+
+宏允许用户为一段代码定义一个名字，这样你可以在以后使用这个名字来运行这段代码。
+就象在magic关键字edit中提到的，列表切片法也适用于宏定义。假设有一个历史记录如下:
 
 ```
 In [3]: hist
@@ -172,7 +179,17 @@ In [3]: hist
 
 你可以这样来定义一个宏：
 
-In [4]: macro print_l 2 Macro print_l created. To execute, type its name (without quotes). Macro contents: for i in l: print i
+```python
+In [4]: macro print_l 2
+```
+
+Macro print_l created. To execute, type its name (without quotes). Macro contents:
+
+```
+for i in l:
+    print i
+```
+
 运行宏:
 
 ```
@@ -180,7 +197,8 @@ In [5]: print_l
 Out[5]: Executing Macro...
 ```
 
-在这里，列表l是空的，所以没有东西被输出。但这其实是一个很强大的功能，我们可以赋予列表l某些实际值，再次运行宏就会看到不同的结果:
+在这里，列表l是空的，所以没有东西被输出。但这其实是一个很强大的功能，
+我们可以赋予列表l某些实际值，再次运行宏就会看到不同的结果:
 
 ```
 In [6]: l = range(5)
@@ -194,12 +212,15 @@ Out[7]: Executing Macro...
 4
 ```
 
-当运行一个宏时就好象你重新输入了一遍包含在宏 ``print_1`` 中的代码。它还可以使用新定义的变量 ``l``。
-由于Python语法中没有宏结构（也许永远也不会有），在一个交互式shell中它更显得是一个有用的特性。
+当运行一个宏时就好象你重新输入了一遍包含在宏 ``print_1`` 中的代码。
+它还可以使用新定义的变量 ``l``。
+由于Python语法中没有宏结构（也许永远也不会有），在一个交互式shell
+中它更显得是一个有用的特性。
 
 ### 环境（Profiles）
 
-就像早前提到的那样，IPython安装了多个配置文件用于不同的环境。配置文件的命名规则是ipythonrc-。要使用特定的配置启动IPython，需要这样
+就像早前提到的那样，IPython安装了多个配置文件用于不同的环境。
+配置文件的命名规则是ipythonrc-。要使用特定的配置启动IPython，需要这样
 
 ```
 ipython -p
@@ -234,39 +255,67 @@ jjones@cerberus[foo]|8> ls -d d* | wc -l
 
 ## 问题和方法
 
-虽然作为标准Python shell的替换，IPython总的来说很完美。还是有两个问题给我带来了一些麻烦。
-感谢IPython的开发者，这两个问题都可以通过配置来解决，每个配置都有清晰的文档。
+虽然作为标准 Python Shell 的替代，IPython 总的来说很完美，但仍然存在一些问题。
 
-第一个问题是关于颜色的。在我的一个系统上，我使用的是一个白色背景的xterm。当我使用 ``?`` 和 ``??``
-查询一个对象或模块的信息时，对象的定义会被显示，但看起来好象那些参数丢失了。
-那是因为在构造函数中的的参数默认显示为白色。我的解决办法是在IPython shell中输入colors LightBG。
+第一个问题是关于配色。在我的一个系统上，使用了一个白色背景的 xterm，在使用 ``?`` 和 ``??``
+查询一个对象或模块的信息时，虽然会显示对象的定义，但看起来就好象丢失了。
+那是因为在构造函数中的的参数默认是白色字体。我的解决办法是在 IPython Shell
+中输入 ``colors LightBG`` 设置 Shell 主题。
 
-第二个问题是关于自动缩进和代码粘贴的。如果autoindent被启用，IPython会对我粘贴的已排好缩进的代码再次应用缩进。
+第二个问题是关于自动缩进和代码粘贴的。autoindent 启用状态，IPython 会对我粘贴的已排好缩进的代码重新缩进。
 例如下面的代码:
 
 ```
 for i in range(10):
-for j in range(10):
-for k in range(10):
-pass
+    for j in range(10):
+        for k in range(10):
+            pass
 ```
 
 会变成:
 
 ```
 for i in range(10):
-for j in range(10):
-for k in range(10):
-pass
+        for j in range(10):
+                for k in range(10):
+                        pass
 ```
 
-在这里它并不是个问题，因为在它自身中缩进都保持一致。在其它一些情况下，可能会成为真正的问题。
-可以使用magic关键字autoindent来开关自动缩进，告诉IPython不要添加多余的缩进──就象在vim中设置粘贴set paste一样。
+在上面的例子中并不是个问题，因为在它仍然保证了缩进一致。在另一些情况下，可能会成为真正的问题。
+可以使用 magic 命令 ``autoindent`` 来开关自动缩进，就像在 Vim 中设置 ``set paste`` 一样。
 
 
 ## 作为库使用
 
 NotFinished
+
+
+## Vim 模式
+
+
+## Mac 下的快捷启动
+
+IPython wiki 提供了一段 [AppleScript launcher] 脚本，把它写入 ``~/bin/ipy``
+在 Mac Spotlight 中输入 ``ipy`` 并回车就可以在新 iTerm 窗口中打开 IPython Shell。
+下面是我稍微修改后的版本：
+
+```applescript
+#!/usr/bin/osascript
+-- Run ipython on a new iTerm
+-- See http://www.iterm2.com/#/section/documentation/scripting
+
+tell application "iTerm"
+    activate
+    set ipyterm to (make new terminal)
+    tell ipyterm
+        set ipysession to (make new session)
+        tell ipysession
+            set name to "IPython"
+            exec command "${which ipython}"
+        end tell
+    end tell
+end tell
+```
 
 
 ## IPython notebook
@@ -277,4 +326,7 @@ NotFinished
 
 IPython notebook 的使用和 Vim 有些类似，分“命令模式”和“编辑模式”，切换方法同样为 ``ESC`` 键。
 在命令模式下按 ``h`` 可以呼出帮助菜单，貌似不区分大小写。
+
+
+[AppleScript launcher]: https://github.com/ipython/ipython/wiki/Cookbook:-Launching-IPython-on-OSX#using-iterm2-and-an-applescript-launcher
 
