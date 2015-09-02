@@ -9,6 +9,7 @@
    * [BPython](repl/bpython.md)
    * [IPython](repl/ipython.md)
    * [设置 Django Shell](repl/django.md)
+* [科学计算](sci/README.md)
 * [网络应用](web-app/README.md)
    * [HTTP](web-app/http.md)
    * [分布式系统](web-app/distribute.md)
