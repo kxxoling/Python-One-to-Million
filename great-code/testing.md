@@ -244,7 +244,7 @@ commands=make test     	# 执行测试的命令
 
 [mock](http://www.voidspace.org.uk/python/mock/) 是一个测试库，提供模拟对象供测试用例使用。
 [Python 3 以后](https://docs.python.org/3/library/unittest.mock.html#module-unittest.mock)，
-mock 已经加入标准库，调用方法是 ``from unittest import mock``。
+已将 mock 已经加入标准库，调用方法是 ``from unittest import mock``。
 
 
 ## Code Coverage
@@ -253,7 +253,8 @@ mock 已经加入标准库，调用方法是 ``from unittest import mock``。
 的代码都有隐藏 bug 的可能。在 Python 社区，代码覆盖计算工具的标准是 ``coverage.py`` ，
 当然，在计算覆盖率时要记得配合 tox ，以保证你针对不同环境的代码都被运行过。
 
-coverage.py 的工作流程请参阅：[How coverage.py works](http://coverage.readthedocs.org/en/latest/howitworks.html)
+coverage.py 的工作流程请参阅：[How coverage.py works](http://coverage.readthedocs.org/en/latest/howitworks.html)；
+详细文档请参阅：[Documentation](http://coverage.readthedocs.org/)。
 
 coverage.py 也有 nose 插件，可以配合使用。
 
