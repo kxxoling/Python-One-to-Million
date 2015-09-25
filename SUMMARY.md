@@ -30,6 +30,7 @@
    * [wget](console/wget.md)
    * [progressbar](console/progressbar.md)
    * [colorama](console/colorama.md)
+   * [Gooey——把 CLI 程序变成 GUI](console/gooey.md)
 * [数据库](db/README.md)
    * [DB API](db/db-api.md)
    * [SQLAlchemy](db/sqlalchemy.md)
