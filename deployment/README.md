@@ -12,7 +12,7 @@
 * [uWSGI] / [Gunicorn] ：WSGI 服务器；
 
 
-## 应用级
+## web 应用服务器
 
 ### uWSGI
 
@@ -35,15 +35,21 @@ Nginx 之后，由 Nginx 提供静态文件服务，动态请求则通过反向�
 ### Nginx/Apache
 
 
-## 系统级
+## 服务器部署
+
+Python 应用部署的常用工具有 [Fabric]、[SaltStack]、[Ansible] 和 [Puppet]，前三者都是 Python
+应用，Puppet 这是 Ruby 便携的服务器部署工具，除 Fabric 是完全开源外，后三者背后都有商业公司，
+提供应用的商业版本或者应用之外的企业服务。
 
 ### Fabric
 
-### SaltStack
-
-### Puppet
+[Fabric](fabric.md) 是一个基于 SSH 的命令式部署工具，通过编写 ``fabfile`` 来扩展和定制 Fabric
+的功能。不得不说，对于复杂的部署环境来说，Fabric 的部署方式已经有些落后，但是对于少量、
+简单的服务环境，Fabric 使用起来简单、方便。
 
 ### Ansible
+
+[Ansible](ansible.md) 同样是基于 SSH 的服务器运维工具。
 
 
 [Redis]: http://redis.io/
@@ -51,4 +57,8 @@ Nginx 之后，由 Nginx 提供静态文件服务，动态请求则通过反向�
 [Celery]: http://www.celeryproject.org/
 [RabbitMQ]: https://www.rabbitmq.com/
 [nginx]: https://www.rabbitmq.com/
+[Fabric]: http://fabric.readthedocs.org/
+[SaltStack]: http://saltstack.com/
+[Ansible]: http://www.ansible.com/
+[Puppet]: https://puppetlabs.com/
 
