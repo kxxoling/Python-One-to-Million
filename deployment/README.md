@@ -16,6 +16,12 @@
 
 ### uWSGI
 
+[uWSGI](uwsgi.html) 是一个主要以 C 语言实现的高性能服务器，性能优异、配置灵活，可以使用
+C、C++ 甚至 Objective-C 编写插件。
+
+uWSGI 并不仅仅是一个 WSGI 服务器，它也可以用作 Ruby Rack 应用或者 Perl PSGI 应用的后端服务器。
+
+
 ### Gunicorn
 
 [Gunicorn](gunicorn.html) 是一个类 Unix 系统上一个 Python 实现的 WSGI 服务器，性能很高使用也很简单。
@@ -45,5 +51,4 @@ Nginx 之后，由 Nginx 提供静态文件服务，动态请求则通过反向�
 [Celery]: http://www.celeryproject.org/
 [RabbitMQ]: https://www.rabbitmq.com/
 [nginx]: https://www.rabbitmq.com/
-[uWSGI]: https://uwsgi-docs.readthedocs.org/
 
