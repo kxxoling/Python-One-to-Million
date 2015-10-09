@@ -18,6 +18,12 @@
 
 ### Gunicorn
 
+[Gunicorn](gunicorn.html) 是一个类 Unix 系统上一个 Python 实现的 WSGI 服务器，性能很高使用也很简单。
+
+作为 WSGI 服务器，Guicorn 拥有很好的性能，但是它并不擅长静态文件处理，因此在实际部署中常常隐藏于
+Nginx 之后，由 Nginx 提供静态文件服务，动态请求则通过反向代理发送给 Gunicorn。
+
+
 ### Tornado
 
 ### Nginx/Apache
@@ -40,5 +46,4 @@
 [RabbitMQ]: https://www.rabbitmq.com/
 [nginx]: https://www.rabbitmq.com/
 [uWSGI]: https://uwsgi-docs.readthedocs.org/
-[Gunicorn]: http://gunicorn.org/
 
