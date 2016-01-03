@@ -18,7 +18,6 @@
 给出了一个非常优雅的实现：
 
 ```python
-
 def singleton(cls):
     instance = cls()
     instance.__call__ = lambda: instance
@@ -35,7 +34,6 @@ class Highlander:
 highlander = Highlander()
 another_highlander = Highlander()
 assert id(highlander) == id(another_highlander)
-
 ```
 
 上面的代码定义了一个 singleton 装饰器，覆盖了类的 `__call__` 方法，
@@ -44,7 +42,6 @@ assert id(highlander) == id(another_highlander)
 当然，如果你希望只在需要的时候创建类的实例对象也有别的方法：
 
 ```python
-
 def singleton(cls, *args, **kw):
     instances = {}
     def _singleton():
@@ -63,7 +60,6 @@ one = MyClass()
 two = MyClass()
 
 assert id(one) == id(two)
-
 ```
 
 上面的代码中实现了这样一个装饰器：装饰器函数创建的时候会创建一个 instances 字典，
@@ -78,7 +74,6 @@ assert id(one) == id(two)
 有单例特性的类而不是为类添加单例限制。于是我又找到了基于 metaclass 的实现：
 
 ```python
-
 class Singleton(type):
     def __init__(cls, name, bases, dict):
         super(Singleton, cls).__init__(name, bases, dict)
@@ -94,10 +89,11 @@ class MyClass(object):
 one = MyClass()
 two = MyClass()
 
+assert id(one) == id(two)
 ```
 
-上面的代码在类的第一次实例之后将这个个实例作为其类变量保存，在之后调用类的构造函数的时候
-都直接返回这个实例对象。
+上面的代码在类的第一次实例之后将这个个实例作为其类变量保存，
+在之后调用类的构造函数的时候都直接返回这个实例对象。
 
 这个解决方案强化了类与其单例之间的内聚性。
 
