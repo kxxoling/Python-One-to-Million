@@ -14,7 +14,7 @@
 curl http://uwsgi.it/install | bash -s default /tmp/uwsgi
 ```
 
-活着编译安装最新版本：
+或者编译安装最新版本：
 
 ```sh
 wget http://projects.unbit.it/downloads/uwsgi-latest.tar.gz
